@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08080d"><title>Efe Can — @efecnbeyaz</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 15% 10%,#673ab733,transparent 30%),radial-gradient(circle at 85% 20%,#00bfff22,transparent 28%),#08080d}
+.wrap{width:min(680px,92%);margin:auto;padding:55px 0 35px}.hero{text-align:center}
+.avatar{width:110px;height:110px;margin:auto;padding:3px;border-radius:50%;background:linear-gradient(135deg,#ff2d75,#8c4dff,#00cfff);box-shadow:0 0 45px #704cff55}
+.avatar div{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:#11111a;font-size:40px;font-weight:900}
+h1{margin:18px 0 3px;font-size:30px}.handle{color:#aaa;font-size:15px}.bio{max-width:470px;margin:14px auto;color:#d5d5dd;line-height:1.6;font-size:14px}
+.badge{display:inline-flex;gap:7px;margin-top:12px;padding:7px 12px;border:1px solid #ffffff1c;border-radius:999px;background:#ffffff09;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:#49e58b;box-shadow:0 0 10px #49e58b}
+.links{display:grid;gap:12px;margin-top:30px}.card{display:flex;align-items:center;gap:15px;width:100%;padding:16px 18px;color:white;text-decoration:none;border:1px solid #ffffff1c;border-radius:18px;background:#ffffff0d;backdrop-filter:blur(14px);transition:.25s;cursor:pointer}
+.card:hover{transform:translateY(-3px);background:#ffffff15;border-color:#ffffff40}.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#ffffff0d;font-size:21px;flex:none}.card strong{display:block;font-size:15px}.card span{display:block;margin-top:3px;color:#aaa;font-size:12px}.arrow{margin-left:auto;color:#bbb;font-size:22px}
+.title{margin:30px 2px 10px;color:#777;font-size:12px;letter-spacing:2px;text-transform:uppercase}.nfc{padding:20px;text-align:center;border:1px solid #ffffff1c;border-radius:20px;background:#ffffff09}.nfc h2{font-size:18px}.nfc p{color:#aaa;font-size:13px;line-height:1.6}.nfc button{border:0;border-radius:12px;padding:11px 17px;font-weight:700;cursor:pointer}
+footer{text-align:center;color:#666;font-size:11px;margin-top:30px}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:#fff;color:#111;padding:11px 16px;border-radius:12px;font-weight:700;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+</style></head>
+<body><main class="wrap">
+<header class="hero"><div class="avatar"><div>EC</div></div><h1>Efe Can</h1><div class="handle">@efecnbeyaz</div>
+<p class="bio">Burası benim küçük dijital alanım. Beni diğer platformlarda da bulabilirsin. 👋</p><div class="badge"><i class="dot"></i> online</div></header>
+<section class="links">
+<a class="card" href="https://instagram.com/efecnbeyaz" target="_blank" rel="noopener"><div class="icon">◎</div><div><strong>Instagram</strong><span>@efecnbeyaz</span></div><div class="arrow">›</div></a>
+<a class="card" href="https://www.tiktok.com/@efecnbeyaz" target="_blank" rel="noopener"><div class="icon">♪</div><div><strong>TikTok</strong><span>@efecnbeyaz</span></div><div class="arrow">›</div></a>
+<button class="card" id="share" style="font:inherit;text-align:left"><div class="icon">↗</div><div><strong>Profili paylaş</strong><span>Bu sayfayı arkadaşlarına gönder</span></div><div class="arrow">›</div></button>
+</section>
+<div class="title">NFC</div><section class="nfc"><h2>📲 NFC ile geldin</h2><p>Bu sayfaya NFC kartımı okutarak geldiysen hoş geldin. Buradan tüm bağlantılarıma ulaşabilirsin.</p><button id="copy">Site bağlantısını kopyala</button></section>
+<footer>© <span id="year"></span> Efe Can • Made with ✦</footer></main><div class="toast" id="toast"></div>
+<script>
+const toast=t=>{let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)};
+year.textContent=new Date().getFullYear();
+copy.onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('Site bağlantısı kopyalandı ✓')}catch(e){toast('Kopyalanamadı')}};
+share.onclick=async()=>{if(navigator.share){try{await navigator.share({title:'Efe Can — @efecnbeyaz',text:'Efe Can\'ın profili',url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);toast('Bağlantı kopyalandı ✓')}catch(e){toast('Paylaşım desteklenmiyor')}}};
+</script></body></html>
